@@ -1,1 +1,1 @@
-Experemental project to anderstend how the site work
+Experemental project to understend how the site work
