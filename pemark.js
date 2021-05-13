@@ -8,7 +8,7 @@ const model = [
     ]}
 ]
 
-const $site = document.querySelector(selectors: "#site")
+const $site = document.querySelector (selectors: '#site')
 
 model.forEach(block => {
     console.log(block)
