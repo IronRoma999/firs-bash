@@ -13,7 +13,7 @@ const $site = document.querySelector('#site')
 model.forEach(block => {
     let html = ``
 
-    if (block.type === 'title') {
+    if (block.type === 'tytle') {
         html = `
             <div class="row">
                 <div class="col-sm">
@@ -21,7 +21,7 @@ model.forEach(block => {
                 </div>
             </div>
         `
-    } else if (block.type == 'text') {
+    } else if (block.type === 'text') {
         html = `
             <div class="row">
                 <div class="col-sm">
@@ -29,7 +29,7 @@ model.forEach(block => {
             </div>
         </div>
         `
-    } else if (block.type == 'columns') {
+    } else if (block.type === 'columns') {
     
     }
 
