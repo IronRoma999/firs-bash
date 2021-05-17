@@ -14,25 +14,49 @@ model.forEach(block => {
     let html = ``
 
     if (block.type === 'tytle') {
-        html = `
-            <div class="row">
-                <div class="col-sm">
-                    <h1>${block.value}</h1>
-                </div>
-            </div>
-        `
+        html = title(block)
     } else if (block.type === 'text') {
-        html = `
-            <div class="row">
-                <div class="col-sm">
-                    <p>${block.value}</p>
-            </div>
-        </div>
-        `
+        html = title(text)
     } else if (block.type === 'columns') {
-    
+        html = columns(block)
     }
 
     $site.insertAdjacentHTML('beforeend', html)
 
 })
+
+function title(block) {
+    return `
+        <div class="row">
+            <div class="col-sm">
+                <h1>${block.value}</h1>
+            </div>
+        </div>
+    `
+} 
+
+function title(text) {
+    return `
+        <div class="row">
+            <div class="col-sm">
+                <p>${block.value}</p>
+            </div>
+        </div>
+    `
+}
+
+function columns(block) {
+    return `
+        <div class="row">
+            <div class="col-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, porro.
+            </div>
+            <div class="col-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, porro.
+            </div> 
+            <div class="col-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, porro.
+            </div>
+        </div>
+    `
+}
